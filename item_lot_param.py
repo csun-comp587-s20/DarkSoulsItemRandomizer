@@ -170,7 +170,7 @@ if __name__ == "__main__":
         file_content = f.read()
         
         data = ItemLotParam.load_from_file_content(file_content)
-        #print(data.export_cheatsheet(filter_only_treasure = True))
+        # print(data.export_cheatsheet(filter_only_treasure = True))
         sys.stdout.write(data.export_as_binary())
         sys.stdout.flush()
         

@@ -1,4 +1,3 @@
-
 class RandOptDifficulty:
     EASY = 0
     MEDIUM = 1
@@ -49,7 +48,6 @@ class RandOptStartItemsDifficulty:
             return "Shield/Weapon & Weapon"
         else:
             return ""
-            
     
 class RandOptSoulItemsDifficulty:
     SHUFFLE = 0
@@ -112,4 +110,3 @@ class RandomizerOptions:
         return_string += "  Starting Items: " + RandOptStartItemsDifficulty.as_string(self.start_items_diff) + "\n"
         return_string += "  Laundromat Mixup: " + self.bool_option_to_string(self.randomize_npc_armor) + "\n"
         return return_string
-        

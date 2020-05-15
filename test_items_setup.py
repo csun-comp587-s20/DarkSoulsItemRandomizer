@@ -1,6 +1,21 @@
 import items_setup
 import unittest
 
+# Item lot part unit tests
+
+class item_lot_part_unit_tests(unittest.TestCase):
+    def setUp(self):
+        self.item_lot_part_instance = items_setup.ItemLotPart()
+    def tearDown(self):
+        return super().tearDown()
+    
+# class flag_error(item_lot_part_unit_tests):
+#     def runTest(self):
+#         assert self.
+
+
+# Boss weapon list helper unit tests
+
 class boss_weapon_list_helper_unit_tests(unittest.TestCase):
     def setUp(self):
         self.boss_weapon_list_instance = items_setup.boss_weapon_list_helper

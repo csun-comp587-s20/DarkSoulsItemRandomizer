@@ -1,0 +1,17 @@
+[run]
+include =
+    bnd_rebuilder.py
+    chr_init_param.py
+    chr_setup.py
+    dcx_handler.py
+    item_lot_formatter.py
+    item_lot_param.py
+    item_table.py
+    items_setup.py
+    key_items_setup.py
+    locations_setup.py
+    randomize_item_table.py
+    randomizer_gui.py
+    randomizer_options.py
+    shop_lineup_param.py
+    shops_setup.py

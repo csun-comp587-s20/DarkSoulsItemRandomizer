@@ -1,0 +1,17 @@
+attrs==19.3.0
+click==7.1.2
+coverage==5.1
+glob2==0.7
+junit-xml==1.8
+more-itertools==8.2.0
+mutmut==2.0.0
+ordered-set==4.0.1
+packaging==20.3
+parso==0.7.0
+pluggy==0.13.1
+pony==0.7.13
+py==1.8.1
+pyparsing==2.4.7
+pytest==5.4.2
+six==1.14.0
+wcwidth==0.1.9

@@ -22,5 +22,15 @@ class is_normal_array(appears_bnd_unit_tests):
         assert self.appears_bnd_instance([70, 38, 39, 40, 21]) == False, \
             "This is an instance of bnd"
 
+class offset_to_next_multiple(unittest.TestCase):
+    def setUp(self):
+        self.offset_instance = bnd_rebuilder.offset_to_next_multiple
+    def tearDown(self):
+        return super().tearDown()
+class is_proper_offset(offset_instance):
+    def runTest(self):
+        assert self.offset_instance(32, 35) == 3, \
+            "not a proper offset"
+
 if __name__ == "__main__":
     unittest.main()

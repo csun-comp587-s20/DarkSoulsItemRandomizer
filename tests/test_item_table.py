@@ -1,5 +1,7 @@
-import locations_setup
+import item_table
 import unittest
+
+
 
 if __name__ == "__main__":
     unittest.main()

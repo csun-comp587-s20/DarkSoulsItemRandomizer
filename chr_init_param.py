@@ -8,7 +8,6 @@ def extract_shift_jisz(content, offset):
         offset += 1
     return extracted.decode('shift-jis')
 
-
 class ChrInit:
     STRUCT_FORMAT = ("<3fi4i4i4i5i3i7i10i2i3h4h3hh10b10b5b7b4b10x")
 

@@ -7,6 +7,7 @@ class can_be_used_unit_tests(unittest.TestCase):
         self.can_be_used_instance = chr_setup.can_be_used
     def tearDown(self):
         return super().tearDown()
+
 class cannot_be_used():
     def runTest(self):
         seed = bool(random.getrandbits(1))

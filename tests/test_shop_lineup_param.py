@@ -21,6 +21,8 @@ class is_content_is_not_byte(consume_byte_unit_tests):
     def runTest(self):
         content = b'DCX\x00'
         self.assertRaises(ValueError, self.consume_byte_instance, content, 0, b'D', 3)
+        
+# Extract shift jisz unit tests
 
 class extract_shift_jisz_unit_tests(unittest.TestCase):
     def setUp(self):
@@ -28,6 +30,12 @@ class extract_shift_jisz_unit_tests(unittest.TestCase):
         return super().setUp()
     def tearDown(self):
         return super().tearDown
+
+# class is_shift_jisz(extract_shift_jisz_unit_tests):
+#     def runTest(self):
+#         content = 'hello\x00' # need thex \x00 otherwise inf loop
+#         assert self.extract_shift_jisz_instance(content, 1) == 'ello', \
+#             "Expected: 'ello'"
 
 # class extract_shift_jisz_at_offset_test(extract_shift_jisz_unit_tests):
 #     def runTest(self):

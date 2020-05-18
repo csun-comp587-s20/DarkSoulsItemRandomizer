@@ -27,7 +27,6 @@ def appears_bnd(content):
 
 def unpack_bnd(content):
     """Unpacks the *bnd file content from a BND3-packed file.
-    
     Returns a list of triples (file_id, filepath, filedata)
     """
        

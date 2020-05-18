@@ -1,6 +1,7 @@
 import bnd_rebuilder
 import unittest
-
+from bnd_rebuilder import unpack_bnd
+from bnd_rebuilder import repack_bnd
 # Comsume byte unit tests
 
 class consume_byte_unit_tests(unittest.TestCase):
@@ -83,6 +84,33 @@ class next_mult_equals_offset(offset_to_next_multiple_unit_tests):
     def runTest(self):
         assert self.offset_to_next_multiple_instance(15, 15) == 0, \
             "Expected: 15"
+
+class unpack_bnd_unit_test(unittest.TestCase):
+    def setUp(self):
+        self.unpack_bnd_instance = bnd_rebuilder.unpack_bnd
+        return super().setUp()
+    def tearDown(self):
+        return super().tearDown()
+
+class repack_bnd_unit_test(unittest.TestCase):
+    def setUp(self):
+        self.repack_bnd_instance = bnd_rebuilder.repack_bnd
+        return super().setUp()
+    def tearDown(self):
+        return super().tearDown()
+
+class unpack_test(unpack_bnd_unit_test):
+    def runTest(self):
+        pack = repack_bnd([[3, '2', b'1']])
+        assert self.unpack_bnd_instance(pack) == [(3, '2', b'1')], \
+            "repack pass"
+
+
+# class repack_test(repack_bnd_unit_test):
+#     def runTest(self):
+#         unpack = unpack_bnd(b'                ttttttt\100             ')
+#         assert self.repack_bnd_instance(unpack) == [[3],"filepathlmao", "dummy"], \
+#             "repack pass"
 
 if __name__ == "__main__":
     unittest.main()
